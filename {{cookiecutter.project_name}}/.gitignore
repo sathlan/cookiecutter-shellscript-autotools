@@ -1,0 +1,26 @@
+### https://github.com/manicmaniac/cookiecutter-shellscript-autotools
+
+# http://www.gnu.org/software/automake
+
+Makefile
+Makefile.in
+
+# http://www.gnu.org/software/autoconf
+
+/autom4te.cache
+/aclocal.m4
+/compile
+/configure
+/depcomp
+/stamp-h1
+/config.log
+/config.status
+
+# https://github.com/kward/shunit2
+
+/test/*log
+/test/*trs
+
+# package specific settings
+
+/bin/{{ cookiecutter.package_name }}

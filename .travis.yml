@@ -1,0 +1,18 @@
+language: python
+
+python:
+    - 2.7
+    - 3.4
+    - pypy
+
+before_install:
+    - pip install cookiecutter
+    - cookiecutter . --no-input
+
+install:
+    - cd cookiecutter-shellscript-autotools
+    - autoreconf
+    - ./configure
+
+script:
+    - make check

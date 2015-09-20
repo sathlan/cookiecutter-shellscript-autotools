@@ -1,0 +1,7 @@
+language: C # actually shell script
+install:
+    - ./configure
+script:
+    - make check
+after_failure:
+    - cat test/test-suite.log

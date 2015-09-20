@@ -1,0 +1,20 @@
+#!/bin/sh
+
+help='{{ cookiecutter.project_short_description }}'
+version='@VERSION@'
+
+while :
+do
+    case "$1" in
+        '' | -h | --help)
+            echo "$help"
+            exit
+            ;;
+        -v | --version)
+            echo "$version"
+            exit
+            ;;
+        *)
+            break
+    esac
+done
