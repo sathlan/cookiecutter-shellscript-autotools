@@ -11,8 +11,6 @@ Usage
     pip install cookiecutter
     git clone https://github.com/manicmaniac/cookiecutter-shellscript-autotools.git
     cookiecutter cookiecutter-shellscript-autotools
-    cd $YOUR_PROJECT
-    autoreconf
 
 
 Explanation
