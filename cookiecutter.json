@@ -3,8 +3,10 @@
   "email": "rito.0305@gmail.com",
   "project_name": "cookiecutter-shellscript-autotools",
   "version": "0.0.1",
+  "github_username" : "example_user",
   "project_short_description": "A boilerplate for cookiecutter, of distributable shellscript with autotools and shunit2",
   "readme_travis_badge": true,
-  "readme_travis_url": "https://travis-ci.org/manicmaniac/cookiecutter-shellscript-autotools",
-  "year": 2015
+  "readme_travis_url": "https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}",
+  "now": "{% now 'local' %}",
+  "year": "{{ cookiecutter.now[:4] }}"
 }

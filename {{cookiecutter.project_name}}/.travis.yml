@@ -1,7 +1,10 @@
 language: C # actually shell script
 install:
-    - ./configure
+  - aclocal
+  - automake --add-missing
+  - autoreconf
+  - ./configure
 script:
-    - make check
+  - make check
 after_failure:
-    - cat test/test-suite.log
+  - cat test/test-suite.log

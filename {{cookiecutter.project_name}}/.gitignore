@@ -15,12 +15,18 @@ Makefile.in
 /stamp-h1
 /config.log
 /config.status
+/autoscan.log
+/configure.scan
+/*.tar.gz
 
-# https://github.com/kward/shunit2
+/test/test*.log
+/test/test*.trs
 
-/test/*log
-/test/*trs
+/install-sh
+/missing
+/test-driver
 
 # package specific settings
 
-/bin/{{ cookiecutter.package_name }}
+/bin/{{ cookiecutter.project_name }}
+/test/test-{{ cookiecutter.project_name }}.bats

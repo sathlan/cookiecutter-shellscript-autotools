@@ -1,20 +1,33 @@
 #!/bin/sh
 
-help='{{ cookiecutter.project_short_description }}'
-version='@VERSION@'
+HELP='{{ cookiecutter.project_short_description }}'
+VERSION='@VERSION@'
 
-while :
-do
-    case "$1" in
+usage()
+{
+    cat <<EOF
+${HELP}
+
+usage: `basename $0`
+       `basename $0` -v  : display version
+EOF
+}
+
+while getopts :vh OPT; do
+    case $OPT in
         '' | -h | --help)
-            echo "$help"
-            exit
+            usage
+            exit 0
             ;;
-        -v | --version)
-            echo "$version"
-            exit
+        v|+v)
+            echo "$VERSION"
+            exit 0
             ;;
         *)
-            break
+            usage
+            exit 1
+            ;;
     esac
 done
+shift `expr $OPTIND - 1`
+OPTIND=1

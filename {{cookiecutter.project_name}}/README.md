@@ -1,4 +1,5 @@
-{{ cookiecutter.project_name }} {{ cookiecutter.project_name|count * "=" }}
+{{ cookiecutter.project_name }}
+{{ cookiecutter.project_name|count * "=" }}
 
 {% if cookiecutter.readme_travis_badge -%}
 [![Build Status]({{ cookiecutter.readme_travis_url }}.svg)]({{ cookiecutter.readme_travis_url }})
@@ -12,8 +13,12 @@ Usage
 Installation
 ------------
 
+    aclocal
+    automake --add-missing
+    autoreconf
     ./configure
     make
+    make check
     make install
 
 Requirements
